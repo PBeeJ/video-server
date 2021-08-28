@@ -3,16 +3,21 @@
  This was originally pilfered from
  https://github.com/adeept/Adeept_RaspTank/blob/a6c45e8cc7df620ad8977845eda2b839647d5a83/server/app.py
 
-"Great artists steal". Thank you, @adeept!
+ Which looks like it was in turn pilfered from
+ https://blog.miguelgrinberg.com/post/flask-video-streaming-revisited
+
+"Great artists steal". Thank you, @adeept and @miguelgrinberg!
 """
 
 import os
 import threading
+import time
 
 from flask import Flask, Response, send_from_directory
 from flask_cors import CORS
 
 from camera_opencv import Camera
+from base_camera import BaseCamera
 
 # Raspberry Pi camera module (requires picamera package)
 # from camera_pi import Camera
@@ -39,6 +44,19 @@ def video_feed():
 
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
+
+
+@app.route('/stats')
+def send_stats():
+    now = time.time()
+    total_time = now - BaseCamera.started_at
+    frames_read = BaseCamera.frames_read
+    framesReadPerSecond = frames_read / total_time
+    return {
+        "framesRead": frames_read,
+        "totalTime": total_time,
+        "framesReadPerSecond": framesReadPerSecond,
+    }
 
 
 @app.route('/<path:filename>')

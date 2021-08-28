@@ -14,6 +14,29 @@ TMP_DIR="/tmp/video-server"
 sudo apt-get update
 sudo apt-get upgrade
 
+sudo apt-get install -y \
+git \
+python3-pip
+
+###
+#
+# These I needed to install to use open cv on the
+# raspian lite (no desktop gui)
+#
+sudo apt-get install -y \
+python3-h5py \
+libharfbuzz-dev \
+libwebp-dev \
+libtiff-dev \
+libilmbase23 \
+libopenexr-dev \
+libgstreamer1.0-dev \
+libavcodec-dev \
+libavformat-dev \
+libswscale-dev \
+libqtgui4 \
+libqt4-test
+
 ###
 #
 #  Added for Adeept video streaming; see,
@@ -21,7 +44,6 @@ sudo apt-get upgrade
 #  sourced from @adeept/Adeept_RaspTank.
 #
 #  Thank you @adeept!  ❤️ you!
-
 
 # I added these to accomodate adeept video streaming
 sudo apt-get install -y libjasper-dev
