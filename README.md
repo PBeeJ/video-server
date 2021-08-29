@@ -58,7 +58,7 @@ Exit raspi-config and `sudo reboot`
 If you cloned this project from github to a desktop or laptop, you can run:
 
 ```
-./upload.sh
+./upload.sh pi@raspberrypi.local
 ```
 
 to upload the files.
