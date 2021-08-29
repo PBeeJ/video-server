@@ -1,5 +1,5 @@
 #!/bin/sh
 
-python3 src/server.py
+python3 src/server.py "$@"
 
 
