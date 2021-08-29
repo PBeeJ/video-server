@@ -9,10 +9,6 @@
 """
 
 import os
-import time
-import threading
-import datetime
-import numpy as np
 import cv2
 
 from base_camera import BaseCamera

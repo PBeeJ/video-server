@@ -54,8 +54,7 @@ sudo pip3 install websockets flask flask_cors
 # I'm not sure why Caroline's cv2 setup didn't work for adeept.
 # I originally tried to leave this out
 sudo pip3 install opencv-contrib-python==3.4.3.18
-
-sudo pip3 install zmq pybase64
+sudo pip3 install pybase64
 
 
 ##

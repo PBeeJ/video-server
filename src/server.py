@@ -51,11 +51,11 @@ def send_stats():
     now = time.time()
     total_time = now - BaseCamera.started_at
     frames_read = BaseCamera.frames_read
-    framesReadPerSecond = frames_read / total_time
+    frames_read_per_second = frames_read / total_time
     return {
         "framesRead": frames_read,
         "totalTime": total_time,
-        "framesReadPerSecond": framesReadPerSecond,
+        "framesReadPerSecond": frames_read_per_second,
     }
 
 
