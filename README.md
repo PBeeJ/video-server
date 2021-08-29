@@ -46,10 +46,9 @@ Under "System Options", you may want to select each of the following:
 
 Press escape to return to the main menu.
 
-Under "Interface Options", you will need to enable the following:
+Under "Interface Options", ** you must enable the following **:
 
 - Camera
-- I2C
 
 Exit raspi-config and `sudo reboot`
 
