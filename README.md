@@ -3,8 +3,8 @@
 
 - [video-server](#video-server)
   - [Getting Started](#getting-started)
-      - [Install Raspian OS on SSD card.](#install-raspian-os-on-ssd-card)
-      - [Configure PI for Headless](#configure-pi-for-headless)
+    - [Install Raspian OS on SSD card.](#install-raspian-os-on-ssd-card)
+    - [Configure PI for Headless](#configure-pi-for-headless)
     - [Run raspi-config](#run-raspi-config)
     - [Upload video-server files to pi](#upload-video-server-files-to-pi)
     - [Run setup.sh on the raspberry pi](#run-setupsh-on-the-raspberry-pi)
@@ -95,6 +95,8 @@ point a browser tab at:
 ```
 http://raspberrypi.local:5000
 ```
+
+If you changed the hostname in raspi-config, substitute `raspberrypi.local` with your new hostname`.local`
 
 ### View FPS stats
 
