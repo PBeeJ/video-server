@@ -1,16 +1,16 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
-
 - [video-server](#video-server)
   - [Getting Started](#getting-started)
-    - [Install Raspian OS on SSD card.](#install-raspian-os-on-ssd-card)
-    - [Configure PI for Headless](#configure-pi-for-headless)
+      - [Install Raspian OS on SSD card.](#install-raspian-os-on-ssd-card)
+      - [Configure PI for Headless](#configure-pi-for-headless)
     - [Run raspi-config](#run-raspi-config)
     - [Upload video-server files to pi](#upload-video-server-files-to-pi)
     - [Run setup.sh on the raspberry pi](#run-setupsh-on-the-raspberry-pi)
     - [Run the server](#run-the-server)
+    - [Open the web app](#open-the-web-app)
+    - [View FPS stats](#view-fps-stats)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -62,7 +62,7 @@ If you cloned this project from github to a desktop or laptop, you can run:
 
 to upload the files.
 
-You can also clone this directly on the pi
+You can also clone this directly onto the pi
 
 ```
 cd ~
@@ -86,4 +86,20 @@ This will install all of the dependencies like opencv
 ```
 cd ~/video-server
 ./run.sh
+```
+
+### Open the web app
+
+point a browser tab at:
+
+```
+http://raspberrypi.local:5000
+```
+
+### View FPS stats
+
+point a browser tab at:
+
+```
+http://raspberrypi.local:5000/stats
 ```
